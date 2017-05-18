@@ -11,7 +11,6 @@ private:
 	char sex; 
 public:
 	Clothes();
-	~Clothes();
 	void setSize(int);
 	void setColor(string);
 	void setSex(char);

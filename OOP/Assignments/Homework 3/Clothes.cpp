@@ -8,13 +8,8 @@ Clothes::Clothes()
 {
 	sex = 'M';
 	size = 0;
-	color = "";
+	color = "Undefined Yet";
 	
-}
-
-
-Clothes::~Clothes()
-{
 }
 
 

@@ -2,18 +2,18 @@
 #include<iostream>
 #include "string"
 #include "Product.h"
+#include "Date.h"
 using namespace std;
 class Food : public Product
 {
 private:
-	string expDate , unit; 
+	string  unit; 
+	Date expDate; 
 public:
-	Food();
-	~Food();
-	bool isExpired(string date);
-	void setExpDate(string);
+	bool isExpired(Date date);
+	void setExpDate(Date);
 	void setUnit(string);
-	string getExpDate();
+	Date getExpDate();
 	string getUnit();
 	void print();
 

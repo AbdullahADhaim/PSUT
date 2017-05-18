@@ -1,32 +1,24 @@
 #include "Food.h"
 #include<iostream>
 #include "string"
+
 using namespace std;
 
 
-Food::Food()
-{
-}
-
-
-Food::~Food()
-{
-}
-
-bool Food::isExpired(string date) {
-	return false; //Note this is not completed 
+bool Food::isExpired(Date date) {
+	return expDate.isBigger(date); //Note this is not completed 
 }
 void Food::print() {
 	Product::print();
-	cout << "Expiry Date: " << expDate << " Unit: " << unit << endl;
+	cout << "Expiry Date: " << expDate.getDate() << " Unit: " << unit << endl;
 }
-void Food::setExpDate(string d) {
+void Food::setExpDate(Date d) {
 	expDate = d;
 }
 void Food::setUnit(string u) {
 	unit = u;
 }
-string Food::getExpDate() {
+Date Food::getExpDate() {
 	return expDate;
 
 }

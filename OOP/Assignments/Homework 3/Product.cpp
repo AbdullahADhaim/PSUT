@@ -5,7 +5,7 @@ int Product::productNum = 0;
 
 Product::Product()
 {
-	productNum = productNum++;
+	productNum++;
 	description = NULL;
 	quantity = 0;
 	unitPrice = 0;
@@ -13,7 +13,7 @@ Product::Product()
 
 Product::Product(char d[], int size , int q , float up)
 {
-	productNum = productNum++;
+	productNum++;
 	setDescription(d, size);
 	quantity = q;
 	unitPrice = up;
@@ -52,7 +52,7 @@ int Product::getQuantity() {
 float Product::getUnitPrice() {
 	return unitPrice;
 }
-void Product::print() {
+ void Product::print() {
 	cout << "Product #" << productNum << " - Price: " << unitPrice << " Quantity: " << quantity << endl;
-	cout << "Description: " << *description << endl;
+	cout << "Description: " << description << endl;
 }
